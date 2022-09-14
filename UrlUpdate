@@ -1,20 +1,31 @@
 {
-  "Version": "1.0.0",
-  "ReleaseNotes": "Nova",
-  "UrlUpdate": "https:",
-  "Sms": "https:",
-  "EmailFeedback": "a",
-  "UrlContato": "https:",
-  "UrlTermos": "https:",
+  "Version": "1.0",
+  "ReleaseNotes": "BEM VINDO AO NETSEMLIMITES 1.0 , DESATIVE TLS1.3 NAS CONFIGURAÇOES DO APP. (NESSA ATUALIZAÇAO TEMOS A VIVO NORMAL E A COM EASY E TEM TV ONLINE ONDE ESTA ESCRITO EMAIL FEDBACK",
+  "UrlUpdate":"https://raw.githubusercontent.com/cleybsonheu/UrlUpdate/main/UrlUpdate",
+  "Sms": "",
+  "EmailFeedback": "cleybsonforever1989@gmail.com",
+  "UrlContato": "https://tv0800.xyz/canais/assistir-globo-online-ao-vivo-gratis/",
+  "UrlTermos": "https://www.bet365.com/#/HO/",
   "CheckUser": "true",
   "Udp": [
     {
       "Porta": "7300"
-    }
+    },
   ],
-  "Servers": [
+  "Servers": [    
     {
-      "Name": "Servidor 1",
+      "Name": "VIVO SEM EASY SR 1",
+      "TYPE": "premium",
+      "FLAG": "br.png",
+      "ServerIP": "d3fa32ut4grj5.cloudfront.net",
+      "CheckUser": "",
+      "ServerPort": "22",
+      "SSLPort": "443",
+      "USER": "",
+      "PASS": ""
+    },    
+    {
+      "Name": "VIVO COM EASY SR2",
       "TYPE": "premium",
       "FLAG": "br.png",
       "ServerIP": "bimdanetlive.online",
@@ -23,20 +34,20 @@
       "SSLPort": "443",
       "USER": "",
       "PASS": ""
-     },
-   {
-      "Name": "Servidor 2",
+    },
+    {
+      "Name": "VIVO SEM EASY SR2",
       "TYPE": "premium",
       "FLAG": "br.png",
-      "ServerIP": "netsenew.online",
+      "ServerIP": "d3esdc1bhiblyr.cloudfront.net",
       "CheckUser": "",
       "ServerPort": "22",
       "SSLPort": "443",
       "USER": "",
       "PASS": ""
     },
-   {
-      "Name": "Servidor 3",
+    {
+      "Name": "VIVO COM EASY SR 1 ",
       "TYPE": "premium",
       "FLAG": "br.png",
       "ServerIP": "bindanet.online",
@@ -49,9 +60,39 @@
   ],
   "Networks": [
     {
-      "Name": "VIVO PROXY 1",
+      "Name": "VIVO SEM EASY SR 1",
       "FLAG": "vivo",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
+      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: Websocket[crlf]Connection: Upgrade[crlf][crlf]",
+      "SNI": "",
+      "TlsIP": "",
+      "ProxyIP": "recarga.vivo.com.br",
+      "ProxyPort": "80",
+      "Info": "Proxy"
+    },
+    {
+      "Name": "VIVO SEM EASY sr2",
+      "FLAG": "vivo",
+      "Payload": "GET / HTTP/1.1[crlf]Host: d3esdc1bhiblyr.cloudfront.net[crlf]Upgrade: Websocket[crlf]Connection: Upgrade[crlf][crlf]",
+      "SNI": "",
+      "TlsIP": "",
+      "ProxyIP": "recarga.vivo.com.br",
+      "ProxyPort": "80",
+      "Info": "Proxy"
+    }, 
+    {
+      "Name": "CLARO FRONT",
+      "FLAG": "vivo",
+      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: Websocket[crlf]Connection: Upgrade[crlf][crlf]",
+      "SNI": "d3fa32ut4grj5.cloudfront.net",
+      "TlsIP": "d3fa32ut4grj5.cloudfront.net",
+      "ProxyIP": "",
+      "ProxyPort": "443",
+      "Info": "Tlsws"
+    },        
+    {
+      "Name": "VIVO COM EASY SR 1",
+      "FLAG": "vivo",
+      "Payload": "GET / HTTP/1.1[crlf]Host: bindanet.online[crlf]Upgrade: websocket[crlf][crlf]",
       "SNI": "",
       "TlsIP": "",
       "ProxyIP": "104.18.7.80",
@@ -59,64 +100,14 @@
       "Info": "Proxy"
     },
     {
-      "Name": "VIVO PROXY 2",
+      "Name": "VIVO COM EASY SR 2",
       "FLAG": "vivo",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
+      "Payload": "GET / HTTP/1.1[crlf]Host: bimdanetlive.online[crlf]Upgrade: websocket[crlf][crlf]",
       "SNI": "",
-      "TlsIP": "",
-      "ProxyIP": "104.18.6.80",
-      "ProxyPort": "80",
-      "Info": "Proxy"
-    },
-    {
-      "Name": "VIVO PROXY 3",
-      "FLAG": "vivo",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
-      "SNI": "",
-      "TlsIP": "",
-      "ProxyIP": "104.24.10.16",
-      "ProxyPort": "80",
-      "Info": "Proxy"
-    },
-    {
-      "Name": "CLARO 1",
-      "FLAG": "claro",
-      "Payload": "GET wss://boom4u.com.br/ HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
-      "SNI": "boom4u.com.br",
-      "TlsIP": "boom4u.com.br",
-      "ProxyIP": "",
-      "ProxyPort": "443",
-      "Info": "Tlsws"
-    },
-    {
-      "Name": "CLARO 2",
-      "FLAG": "claro",
-      "Payload": "GET wss://www.boom4u.com.br/ HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: websocket[crlf][crlf]",
-      "SNI": "boom4u.com.br",
-      "TlsIP": "172.67.201.105",
-      "ProxyIP": "",
-      "ProxyPort": "443",
-      "Info": "Tlsws"
-    },
-    {
-      "Name": "Tim",
-      "FLAG": "tim",
-      "Payload": "GET ws://cdnjs.cloudflare.com HTTP/1.1\nHost: [app_host]\nUpgrade: ws\n\n",
-      "SNI": "cdnjs.cloudflare.com",
       "TlsIP": "",
       "ProxyIP": "104.18.7.80",
       "ProxyPort": "80",
       "Info": "Proxy"
-    },
-    {
-     "Name": "Oi",
-      "FLAG": "oi",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [host][crlf]Upgrade: websocket[crlf][crlf]",
-      "SNI": "",
-      "TlsIP": "",
-      "ProxyIP": "104.16.56.6",
-      "ProxyPort": "80",
-      "Info": "Proxy"
-    }
+    },             
   ]
 }
